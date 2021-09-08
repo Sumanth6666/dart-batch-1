@@ -8,7 +8,7 @@ import 'dart:io';
 // extends - extending a class into another class
 class Advertisements {
   static const loadingTime = 5;
-  var navigation = 'new_tab';
+  var navigation;
   Advertisements(dynamic adsCompany) {
     print('$adsCompany ads are about to load...');
     sleep(const Duration(seconds: loadingTime));
@@ -26,4 +26,5 @@ class Browser extends Advertisements {
 
 main() {
   var someperson = new Browser('https://apple.com');
+  someperson.navigation = 'new_tab';
 }

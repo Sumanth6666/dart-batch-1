@@ -30,7 +30,7 @@ class InstanceSpecificClass {
   var brand;
   var product;
   var price;
-  var tax = 5; // percent
+  var tax; // percent
   // constructor
   InstanceSpecificClass(cat, brand, prod, price) {
     // this keyword - self - indetify the current class object
@@ -50,6 +50,8 @@ class InstanceSpecificClass {
 main() {
   InstanceSpecificClass apple = new InstanceSpecificClass(
       'Electronics', 'Apple Inc', 'iPhone 12 Mini', '79990');
+  apple.tax = 12;
   InstanceSpecificClass samsung = new InstanceSpecificClass(
       'Electronics', 'Samsung Inc', 'Galaxy S21', '69990');
+  samsung.tax = 5;
 }

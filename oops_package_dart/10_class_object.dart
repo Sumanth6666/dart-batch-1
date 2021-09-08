@@ -14,6 +14,7 @@
 
 class AnonymousAccessClass {
   static String companyName = 'Sathyabama';
+  var id;
   // shares the common memory for all instances - non manipulated
   // class variable
   AnonymousAccessClass(var obj) {
@@ -29,8 +30,16 @@ class AnonymousAccessClass {
 
 main() {
   // Instantiation - constructor will gets invoked while creating an instance
+  _instances();
+}
+
+_instances() {
   var praveen = new AnonymousAccessClass('Praveen');
+  praveen.id = 1000;
   var nithya = new AnonymousAccessClass('Nithya');
+  nithya.id = 1000;
   var lenin = new AnonymousAccessClass('Lenin');
+  lenin.id = 1000;
   var kaviya = new AnonymousAccessClass('Kaviya');
+  kaviya.id = 1000;
 }
