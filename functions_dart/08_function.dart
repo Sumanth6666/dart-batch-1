@@ -36,10 +36,20 @@ main() {
   nameAnything(150);
   nameAnything(150, 'Praveen');
   nameAnything(150, 'Praveen', true);
+  // funciton overloading
+
+  _functionName(1);
+  _functionName(2);
+  _functionName(3);
+  _functionName(4);
+  // override the company Name
+  _functionName(5, 'St.Josephs', '25000');
+  _functionName(6, 'St.Josephs', '35000');
 } // main()
 
 // parameterized function - optional parameter
 nameAnything(tick, [obj, objTwo]) {
+  // * (0 param to max of n)
   if (tick != null && obj != null && objTwo != null) {
     print('ticket value is $tick and it is for $obj and yes its $objTwo..');
   } else if (tick != null) {
@@ -48,3 +58,17 @@ nameAnything(tick, [obj, objTwo]) {
     print('ticket value is $tick for $obj');
   }
 }
+
+// Default parameterized function
+_functionName(id, [companyName = 'Sathyabama', salary]) {
+  print(
+      'Your id $id and company name is $companyName with salary of  Rs. $salary');
+}
+
+// function() - normal
+// returned function - collected using some object for later user
+// four generic types
+// Default parameterized function , [], {}
+// [] - DPF ----> serialized object
+// {} - DPF ----> Key value pair
+// private can be defined with _ as a prefix for variables and functions
