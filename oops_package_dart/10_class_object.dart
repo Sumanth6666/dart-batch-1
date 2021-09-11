@@ -14,7 +14,8 @@
 
 class AnonymousAccessClass {
   static String companyName = 'Sathyabama';
-  var id;
+  var id; // shares common memory
+  // this
   // shares the common memory for all instances - non manipulated
   // class variable
   AnonymousAccessClass(var obj) {
@@ -22,6 +23,7 @@ class AnonymousAccessClass {
     print('Person $obj is working in $companyName');
     funcAfterManipulation(obj);
   }
+  // constructor
 
   static funcAfterManipulation(var obj) {
     print('Accessed from Class method; $obj is working in $companyName');

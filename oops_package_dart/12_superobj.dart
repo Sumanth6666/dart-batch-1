@@ -14,10 +14,12 @@ class Advertisements {
     sleep(const Duration(seconds: loadingTime));
     print('all ads are loaded now..');
   }
+  // Advertisements(){} - non parameterized constructor
 }
 
 class Browser extends Advertisements {
-  // expplicit super constructor load
+  // explicit super constructor load
+  // parameterized super contructor
   Browser(dynamic url) : super('Google') {
     print('URL is open in ..' + super.navigation);
     print('URL: $url is loading.....');
