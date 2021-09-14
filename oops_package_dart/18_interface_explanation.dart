@@ -30,7 +30,7 @@ class Employee implements Personal, Professional, Wishes {
   late String sports;
 
   @override
-  late String dept;
+  late String dept; // later initialization
 
   Employee(album, sports, dept) {
     this.sports = sports;
